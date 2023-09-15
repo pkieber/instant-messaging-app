@@ -1,11 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogHelpComponent } from '../dialog-help/dialog-help.component';
-import { DialogLegalComponent } from '../dialog-legal/dialog-legal.component';
+import { DialogHelpComponent } from '../../components/dialog-help/dialog-help.component';
+import { DialogLegalComponent } from '../../components/dialog-legal/dialog-legal.component';
 import { SidenavService } from 'src/app/shared/services/sidenav.service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { ChannelService } from 'src/app/shared/services/channel.service';
-import { SearchService } from './../../shared/services/search.service';
+import { SearchService } from '../../shared/services/search.service';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { UserService } from 'src/app/shared/services/user.service';
 import { User } from 'src/models/user.class';

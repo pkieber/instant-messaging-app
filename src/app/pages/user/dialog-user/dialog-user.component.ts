@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { User } from 'src/models/user.class';
 import { DialogUserEditComponent } from '../dialog-user-edit/dialog-user-edit.component';
-import { DialogPictureEditComponent } from '../dialog-picture-edit/dialog-picture-edit.component';
+import { DialogPictureEditComponent } from '../../../components/dialog-picture-edit/dialog-picture-edit.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
-import { SidenavService } from './../../shared/services/sidenav.service';
+import { SidenavService } from '../../../shared/services/sidenav.service';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { UserService } from 'src/app/shared/services/user.service';

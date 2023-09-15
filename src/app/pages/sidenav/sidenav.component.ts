@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { DialogAddChannelComponent } from '../dialog-add-channel/dialog-add-channel.component';
+import { DialogAddChannelComponent } from '../../components/dialog-add-channel/dialog-add-channel.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Channel } from 'src/models/channel.class';
 import { ChannelService } from 'src/app/shared/services/channel.service';
@@ -82,7 +82,7 @@ export class sidenavComponent implements OnInit, OnDestroy {
     this.channel.creatorId = await this.auth.currentUser.then((user) => user?.uid ||'');
     this.channel.members.push(this.channel.creatorId);
     this.channelService.setChannel(this.channel);
-   
+
   }
 
 

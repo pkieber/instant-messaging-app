@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CollectionReference, DocumentData } from '@angular/fire/firestore';
-import { Observable, Subscription, take } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { ChatService } from 'src/app/shared/services/chat.service';
 import { SidenavService } from 'src/app/shared/services/sidenav.service';
 import { UserService } from 'src/app/shared/services/user.service';
@@ -39,12 +38,7 @@ export class DirectMessagesSectionComponent implements OnInit {
   }
 
 
-  ngOnDestroy(): void {
-    // this.chatSub.unsubscribe();
-    // if (this.userSub != undefined) {
-    //   this.userSub.unsubscribe();
-    // }
-  }
+  ngOnDestroy(): void {}
 
   async getAllUsers() {
     const allUsers: any = [];
@@ -54,19 +48,16 @@ export class DirectMessagesSectionComponent implements OnInit {
     });
     return allUsers;
   }
-  
+
   /**
    * Get current logged in user id from UserServie
   */
- async getCurrentUserId() {
-   await this.userService.getCurrentUser()
-   .then((currentUserId) => {
-     this.currentUserId = currentUserId;
-    })
+  async getCurrentUserId() {
+    await this.userService.getCurrentUser()
+    .then((currentUserId) => {
+      this.currentUserId = currentUserId;
+      })
   }
-  
-
-  /////////////////////////////////////////////////////////////////////////////////
 
 
   setNameFirstUser(memberId: string) {
@@ -89,7 +80,7 @@ export class DirectMessagesSectionComponent implements OnInit {
   getChatUserImage(memberId: string) {
     let index = memberId[0] === this.currentUserId ? 1 : 0;
     let img = '';
-    
+
     this.allUsers.forEach((user: any) => {
       if (user.userId === memberId[index]) {
         img = user.profilePicture

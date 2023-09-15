@@ -1,18 +1,7 @@
 <div class="load-wrapper" *ngIf="isLoading">
-  <!-- <div class="lds-roller">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div> -->
   <img class="loading-logo" src="assets/img/logo.png" alt="logo" />
 </div>
 
-<!--  -->
 
 <div *ngIf="chatData$ && !isLoading">
   <div class="chat-partners " *ngIf="chatData$ != undefined">

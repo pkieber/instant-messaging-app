@@ -1,14 +1,14 @@
 {
   "targets": {
-    "slacky-89fdb": {
+    "instant-messaging-app": {
       "hosting": {
-        "slack-clone-angular": [
-          "slacky-89fdb"
+        "instant-messaging-app": [
+          "chat-app-5ad36"
         ]
       }
     }
   },
   "projects": {
-    "default": "slacky-89fdb"
+    "default": "chat-app-5ad36"
   }
 }

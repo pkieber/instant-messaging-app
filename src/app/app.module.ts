@@ -41,15 +41,15 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 
 /** Components */
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { ToolbarComponent } from './pages/toolbar/toolbar.component';
 import { DialogHelpComponent } from './components/dialog-help/dialog-help.component';
 import { DialogLegalComponent } from './components/dialog-legal/dialog-legal.component';
-import { DialogUserComponent } from './components/dialog-user/dialog-user.component';
-import { DialogUserEditComponent } from './components/dialog-user-edit/dialog-user-edit.component';
-import { sidenavComponent } from './components/sidenav/sidenav.component';
+import { DialogUserComponent } from './pages/user/dialog-user/dialog-user.component';
+import { DialogUserEditComponent } from './pages/user/dialog-user-edit/dialog-user-edit.component';
+import { sidenavComponent } from './pages/sidenav/sidenav.component';
 import { DialogAddChannelComponent } from './components/dialog-add-channel/dialog-add-channel.component';
-import { ChannelComponent } from './components/channels/channel/channel.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ChannelComponent } from './pages/channels/channel/channel.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { ForgotPasswordComponent } from './components/auth/forgot-password/forgot-password.component';
 import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
@@ -64,17 +64,17 @@ import { NewChatComponent } from './components/direct-messages/new-chat/new-chat
 /** Services */
 import { AuthService } from './shared/services/auth.service';
 import { CdkDrag } from '@angular/cdk/drag-drop';
-import { DialogAddDescriptionComponent } from './components/channels/dialog-add-description/dialog-add-description.component';
-import { DialogAddPeopleComponent } from './components/channels/dialog-add-people/dialog-add-people.component';
-import { DialogViewPeopleComponent } from './components/channels/dialog-view-people/dialog-view-people.component';
-import { ThreadComponent } from './components/channels/thread/thread.component';
+import { DialogAddDescriptionComponent } from './pages/channels/dialog-add-description/dialog-add-description.component';
+import { DialogAddPeopleComponent } from './pages/channels/dialog-add-people/dialog-add-people.component';
+import { DialogViewPeopleComponent } from './pages/channels/dialog-view-people/dialog-view-people.component';
+import { ThreadComponent } from './pages/channels/thread/thread.component';
 import { SearchComponent } from './components/search/search.component';
 import { SidenavThreadsComponent } from './components/sidenav-threads/sidenav-threads.component';
 import { SidenavUsersComponent } from './components/sidenav-users/sidenav-users.component';
-import { DescriptionComponent } from './components/channels/description/description.component';
-import { HeaderComponent } from './components/channels/header/header.component';
-import { MessagesComponent } from './components/channels/messages/messages.component';
-import { ThreadsComponent } from './components/channels/threads/threads.component';
+import { DescriptionComponent } from './pages/channels/description/description.component';
+import { HeaderComponent } from './pages/channels/header/header.component';
+import { MessagesComponent } from './pages/channels/messages/messages.component';
+import { ThreadsComponent } from './pages/channels/threads/threads.component';
 
 
 @NgModule({
