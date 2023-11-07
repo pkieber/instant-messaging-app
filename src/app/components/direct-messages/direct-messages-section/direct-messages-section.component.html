@@ -9,9 +9,9 @@
   <div *ngIf="!collapsed">
     <div *ngFor="let chat of chatService.allChats$ | async"  (click)="toggleSidenav()">
 
-      <div *ngIf="chat['members'].includes(this.currentUserId)">
+      <div *ngIf="chat['members']?.includes(this.currentUserId)">
         <div class="user-direct-msg flex-ac" [routerLink]="['chat/' + chat['chatId']]" routerLinkActive="activeLink">
-          <img src="{{ getChatUserImage(chat['members']) || '/../../assets/img/profile.png' }}" />
+          <img src="{{ getChatUserImage(chat['members']) || '/assets/img/profile.png' }}" />
           <span>{{ setNameFirstUser(chat['members']) }}</span>
           <div class="extra-members" *ngIf="chat['members'].length > 2">
             +{{ chat['members'].length - 2 }}
@@ -25,6 +25,5 @@
       <mat-icon class="add-item" fontIcon="add"></mat-icon>
       <p>Create new chat</p>
     </div>
-    <!--  -->
   </div>
 </div>

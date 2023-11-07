@@ -26,7 +26,7 @@ const routes: Routes = [
       { path: 'create-chat', component: NewChatComponent, canActivate: [AuthGuard] },
       { path: 'thread/:id', component: ThreadComponent, canActivate: [AuthGuard] },
       { path: 'sidenav', component: sidenavComponent, canActivate: [AuthGuard] },
-    ], canActivate: [AuthGuard]
+    ],
   },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'sign-up', component: SignUpComponent },

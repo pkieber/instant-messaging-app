@@ -10,20 +10,17 @@ import { Thread } from 'src/models/thread.class';
 @Injectable({
   providedIn: 'root'
 })
-export class ChannelService {
 
+
+export class ChannelService {
   private threadRef = collection(this.firestore, 'threads');
   private messageRef = collection(this.firestore, 'messages');
   private channelRef = collection(this.firestore, 'channels');
   allChannels$ = collectionData(this.channelRef) as Observable<Channel[]>;
-
   threads: Thread[] = [];
   messages: Message[] = [];
-
   threadMessages$!: Observable<Message[]>;
-
   channelId!: string;
-
 
   // Setting up the query to listen for changes in the user collection.
   private qChannel = query(this.channelRef);
@@ -33,9 +30,9 @@ export class ChannelService {
 
 
   constructor(
-    private firestore: Firestore,
-  ) {
-   }
+    private firestore: Firestore
+  ) {}
+
 
   /**
   * Subscribes to the channel collection and listens for changes.
@@ -56,6 +53,7 @@ export class ChannelService {
     });
   }
 
+
   /**
    * Adds a new channel to the allChannels$ Observable.
    * @param change as any.
@@ -67,6 +65,7 @@ export class ChannelService {
       return [...channels, new Channel(change)]
     }));
   };
+
 
   /**
    * Updates a channel in the allChannels$ Observable.
@@ -84,6 +83,7 @@ export class ChannelService {
       })
     }));
   }
+
 
   /**
    * Removes a channel from the allChannels$ Observable.

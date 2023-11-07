@@ -12,7 +12,7 @@ import { UserService } from 'src/app/shared/services/user.service';
 })
 export class NewChatComponent implements OnDestroy {
   allUsers: Array<any> = [];
-  filtredUsers: Array<any> = []; 
+  filtredUsers: Array<any> = [];
   addedUsers: Array<any> = [];
 
   // Subscriptions
@@ -30,10 +30,7 @@ export class NewChatComponent implements OnDestroy {
   }
 
 
-  ngOnDestroy(): void {
-    // this.userSub.unsubscribe();
-    // this.userSub2.unsubscribe();
-  }
+  ngOnDestroy(): void {}
 
 
   async addCurrentUser() {
@@ -81,7 +78,7 @@ export class NewChatComponent implements OnDestroy {
   }
 
   /**
-   * filter duplicates in addedUsers Array 
+   * filter duplicates in addedUsers Array
    * @param user input as a Object
    */
   filterDuplicates(user: any) {
@@ -108,7 +105,7 @@ export class NewChatComponent implements OnDestroy {
    * @param users added Users as Object
    */
   async createNewChat() {
-    console.log(this.addedUsers)
+    // console.log(this.addedUsers)
     const userExists = await this.checkCurrentUserChats();
     if (this.addedUsers.length >= 1) {
       const chatId = this.generateRandomId();
@@ -133,7 +130,7 @@ export class NewChatComponent implements OnDestroy {
     return chatIds.includes(currentUser);
   }
 
-  /** removes user in html of already added users 
+  /** removes user in html of already added users
    * based on index of addedUsers array */
   removeUser(userIndex: number) {
     this.addedUsers.splice(userIndex, 1);

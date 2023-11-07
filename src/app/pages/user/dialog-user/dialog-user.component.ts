@@ -46,7 +46,7 @@ export class DialogUserComponent implements OnInit, OnDestroy {
 
 
   ngOnDestroy(): void {
-    console.log('DialogUserComponent destroyed');
+    // console.log('DialogUserComponent destroyed');
     this.userSub.unsubscribe();
     this.sidenavSub.unsubscribe();
     this.allUsersSub.unsubscribe();
@@ -58,7 +58,7 @@ export class DialogUserComponent implements OnInit, OnDestroy {
       user ? this.userId = user.uid : null;
     });
     this.allUsersSub = this.userService.allUsers$.subscribe((users) => {
-      console.log('users: ', users)
+      // console.log('users: ', users)
       let user = users.find((user) => user.userId === this.userId);
       user ? this.user = user : null;
     });

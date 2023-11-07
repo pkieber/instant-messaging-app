@@ -36,7 +36,7 @@ export class sidenavComponent implements OnInit, OnDestroy {
 
 
   ngOnInit(): void {
-    console.log('SidenavComponent initialized');
+    // console.log('SidenavComponent initialized');
     this.loadChannels();
     this.handleSidenavVisibility();
   }
@@ -76,7 +76,6 @@ export class sidenavComponent implements OnInit, OnDestroy {
 
 
   async createChannel(dialogData: string) {
-    // ggf noch den aktuellen User als Member hinzufügen
     this.channel = new Channel();
     this.channel.name = dialogData;
     this.channel.creatorId = await this.auth.currentUser.then((user) => user?.uid ||'');
